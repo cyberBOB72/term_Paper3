@@ -2,9 +2,9 @@ import json
 from json import JSONDecodeError
 
 
-def get_posts_all(data):
+def get_json(data):
     """
-    Возвращает посты
+    Чтение фалов json.
     :return: json.load(file)
     """
     try:
@@ -24,7 +24,7 @@ def get_posts_by_user(user_name, data):
     """
     try:
         for name in data:
-            if user_name == name['poster_name']:
+            if user_name == name['pk']:
                 return name
     except ValueError:
         return f'Такого пользователя нет'
@@ -35,18 +35,9 @@ def get_comments_by_post_id(post_id, data):
     Возвращает комментарии определенного поста
     """
     try:
-        with open(data, 'r', encoding='utf-8') as file:
-            comments = json.load(file)
-    except FileNotFoundError:
-        print("Файл не найден")
-    except JSONDecodeError:
-        print("Файл не удается преобразовать")
-    try:
-        all_comments = []
-        for comment in comments:
-            if post_id == comment['post_id']:
-                all_comments.append(comment['comment'])
-        return all_comments
+        for name in data:
+            if post_id == name['post_id']:
+                return name
     except ValueError:
         return f'Такого поста нет'
 
