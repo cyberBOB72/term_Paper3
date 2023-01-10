@@ -26,8 +26,8 @@
   <main class="container">
 
     <div class="search">
-      <form action="/search" class="search__form">
-        <input type="search" class="search__input">
+      <form action="/search/" method = "post" class="search__form">
+        <input type="search" name="name"  class="search__input">
       </form>
     </div>
 
@@ -35,7 +35,7 @@
       {% for name in post %}
       <div class="items__item item">
         <div class="item__top">
-          <a href="/user-feed.html" class="item__head">
+          <a href="/users/{{ name['poster_name'] }}" class="item__head">
             <div class="item__ava-wrap">
               <img src={{ name['poster_avatar'] }} alt="" class="item__ava" width="47">
             </div>
