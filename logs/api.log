@@ -1,0 +1,14 @@
+2023-01-16 17:59:32,421 : [INFO] : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-01-16 17:59:32,421 : [INFO] : [33mPress CTRL+C to quit[0m
+2023-01-16 17:59:39,159 : [INFO] : 127.0.0.1 - - [16/Jan/2023 17:59:39] "GET / HTTP/1.1" 200 -
+2023-01-16 17:59:39,283 : [INFO] : 127.0.0.1 - - [16/Jan/2023 17:59:39] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+2023-01-16 17:59:39,290 : [INFO] : 127.0.0.1 - - [16/Jan/2023 17:59:39] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+2023-01-16 17:59:39,331 : [INFO] : 127.0.0.1 - - [16/Jan/2023 17:59:39] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+2023-01-16 17:59:39,404 : [INFO] : 127.0.0.1 - - [16/Jan/2023 17:59:39] "GET /favicon.ico HTTP/1.1" 200 -
+2023-01-16 17:59:58,504 : [INFO] : Определенный пост запрошен
+2023-01-16 17:59:58,504 : [INFO] : 127.0.0.1 - - [16/Jan/2023 17:59:58] "GET /api/posts/3 HTTP/1.1" 200 -
+2023-01-16 17:59:58,588 : [INFO] : 127.0.0.1 - - [16/Jan/2023 17:59:58] "GET /favicon.ico HTTP/1.1" 200 -
+2023-01-16 18:00:37,395 : [INFO] : Посты запрошены
+2023-01-16 18:00:37,395 : [INFO] : 127.0.0.1 - - [16/Jan/2023 18:00:37] "GET /api/posts HTTP/1.1" 200 -
+2023-01-16 18:00:37,562 : [INFO] : 127.0.0.1 - - [16/Jan/2023 18:00:37] "GET /favicon.ico HTTP/1.1" 200 -

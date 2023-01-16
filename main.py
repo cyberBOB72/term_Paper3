@@ -6,11 +6,8 @@ from flask import Flask, render_template, request, jsonify
 posts = get_json('data\posts.json')
 comments = get_json('data\comments.json')
 
-logger_one = logging.getLogger("logs/api.log.txt")
-file_handler = logging.FileHandler("logs/api.log.txt")
-formatter = logging.Formatter("%(asctime)s : [%(levelname)s] : %(message)s")
-file_handler.setFormatter(formatter)
-logger_one.addHandler(file_handler)
+logging.basicConfig(filename="logs/api.log", encoding='utf-8', level=logging.INFO, format="%(asctime)s : [%(levelname)s] : %(message)s")
+
 
 app = Flask(__name__)
 

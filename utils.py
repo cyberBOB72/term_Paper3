@@ -1,5 +1,4 @@
 import json
-from json import JSONDecodeError
 
 
 def get_json(data):
@@ -12,14 +11,14 @@ def get_json(data):
             return json.load(file)
     except FileNotFoundError:
         print("Файл не найден")
-    except JSONDecodeError:
+    except json.JSONDecodeError:
         print("Файл не удается преобразовать")
 
 
 def get_posts_by_pk(pk, data):
     """
-    Посты определенного пользователя
-    :param user_name: None
+    Пост определенного пользователя
+    :param pk: None
     :return:
     """
     try:
@@ -66,12 +65,3 @@ def search_for_posts(query, data):
         if query.lower() in post['content'].lower():
             posts.append(post)
     return posts[:10]
-
-
-def get_post_by_pk(pk, data):
-    """
-    Возвращает один пост по его идентификатору
-    """
-    for id in data:
-        if pk == id['pk']:
-            return id
