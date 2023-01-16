@@ -1,7 +1,8 @@
 import logging
 
-from utils import *
 from flask import Flask, render_template, request, jsonify
+
+from utils import get_json, get_posts_by_pk, get_posts_by_user, get_comments_by_post_id, search_for_posts
 
 posts = get_json('data\posts.json')
 comments = get_json('data\comments.json')

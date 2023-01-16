@@ -25,12 +25,12 @@ def get_posts_by_pk(pk, data):
         for name in data:
             if pk == name['pk']:
                 return name
-    except ValueError:
+    except:
         return f'Такого пользователя нет'
 
 def get_posts_by_user(user_name, data):
     """
-    Посты определенного пользователя
+    Пост определенного пользователя
     :param user_name: None
     :return:
     """
@@ -38,7 +38,7 @@ def get_posts_by_user(user_name, data):
         for name in data:
             if user_name == name['poster_name']:
                 return name
-    except ValueError:
+    except:
         return f'Такого пользователя нет'
 
 
